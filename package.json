@@ -1,0 +1,31 @@
+{
+  "name": "bit-docs-glob-finder",
+  "version": "0.0.1",
+  "description": "A glob based finder",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bit-docs/bit-docs-glob-finder.git"
+  },
+  "keywords": [
+    "donejs",
+    "bit-docs"
+  ],
+  "author": "Bitovi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bit-docs/bit-docs-glob-finder/issues"
+  },
+  "homepage": "https://github.com/bit-docs/bit-docs-glob-finder#readme",
+  "dependencies": {
+    "glob": "^7.0.3",
+    "lodash": "^4.13.1",
+    "minimatch": "^3.0.0"
+  },
+  "devDependencies": {
+    "mocha": ">= 1.18.0"
+  }
+}

@@ -44,6 +44,9 @@ module.exports = function(siteConfig){
 		globOptions = _.extend({}, siteConfig.glob);
 		delete globOptions.pattern;
 	}
+	if(!globOptions.cwd && siteConfig.cwd) {
+		globOptions.cwd = siteConfig.cwd;
+	}
 
 	var glb = new glob.Glob(pattern, globOptions);
 	var ignore = siteConfig.glob.ignore;

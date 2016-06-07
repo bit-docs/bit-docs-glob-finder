@@ -1,6 +1,6 @@
 {
   "name": "bit-docs-glob-finder",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A glob based finder",
   "main": "index.js",
   "scripts": {

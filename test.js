@@ -22,7 +22,7 @@ describe("bid-docs-glob-finder",function(){
 
 		});
 		fileEventEmitter.on("end",function(){
-			assert.equal(matches, 4, "4 files found");
+			assert.equal(matches, 5, "5 files found");
 			done();
 		});
 	});

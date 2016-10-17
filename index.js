@@ -48,6 +48,7 @@ module.exports = function(siteConfig){
 		globOptions.cwd = siteConfig.cwd;
 	}
 
+	globOptions.nodir = true;
 	var glb = new glob.Glob(pattern, globOptions);
 	var ignore = siteConfig.glob.ignore;
 

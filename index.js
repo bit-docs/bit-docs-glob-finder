@@ -5,34 +5,33 @@ var fs = require('fs');
 var path = require('path');
 
 /**
- * @function documentjs.find.files
+ * @parent bit-docs-glob-finder/modules
+ * @module {function} bit-docs-glob-finder/index
  *
- * @parent documentjs.find.methods
+ * @signature `find.files(siteConfig)`
  *
- * @signature `.find.files(siteConfig)`
+ * @param {Object} siteConfig Options that configure the behavior of the files
+ * that will be processed.
  *
- * @param {Object} siteConfig Options that configure the behavior of the
- * files that will be processed.
+ * @option {String|bit-docs-glob-finder/types/globObject} glob The glob option
+ * either specifies a [minimatch](https://github.com/isaacs/minimatch) pattern
+ * like:
  *
- * @option {String|documentjs.find.globObject} glob The glob
- * option either specifies a [minmatch](https://github.com/isaacs/minimatch)
- * pattern like:
+ *     find.files({glob: "*.js"})
  *
- *     documentjs.find.files({glob: "*.js"})
+ * Or a [bit-docs-glob-finder/types/globObject] that specifies the a
+ * [minimatch](https://github.com/isaacs/minimatch) pattern and other
+ * siteConfig like:
  *
- * Or a [documentjs.find.globObject GlobObject] that specifies the
- * a [minmatch](https://github.com/isaacs/minimatch) pattern and
- * other siteConfig like:
- *
- *     documentjs.find.files({
+ *     find.files({
  *       glob: {
  *         pattern: "*.js",
  *         cwd: __dirname
  *       }
  *     })
  *
- * @return {documentjs.process.types.FileEventEmitter} An event emitter that
- * emits events for matched files.
+ * @return {bit-docs/types/FileEventEmitter} An event emitter that emits events
+ * for matched files.
  */
 module.exports = function(siteConfig){
 	var pattern;

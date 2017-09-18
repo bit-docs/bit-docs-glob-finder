@@ -1,7 +1,6 @@
 var glob = require("glob");
 var _ = require("lodash");
 var minimatch = require("minimatch");
-var fs = require('fs');
 var path = require('path');
 
 /**
@@ -63,9 +62,6 @@ module.exports = function(siteConfig){
 			if(event === "match") {
 				var handler = function(filepath){
 					var dir = path.dirname(filepath);
-					if( fs.lstatSync(dir).isSymbolicLink() && (globOptions.follow === false) ) {
-						console.warn("WARNING!!\n" + 'Detected symbolic link without `"follow": true` glob setting for ' + dir + "\n");
-					}
 					for(var i = 0; i < ignore.length; i++) {
 						if( minimatch(filepath, ignore[i]) ) {
 							return;
